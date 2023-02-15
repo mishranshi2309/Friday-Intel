@@ -7,7 +7,7 @@
 
 Fork this repository using the **Fork** option at the top-right corner of this page. This will create your own copy of this repository. You'll be redirected to your forked repository. Copy the link of this repository (which will look like `https://github.com/<your-username>/Friday-Intel/`) as you'll need it in the step 2.
 
-![how-to-fork](https://i.imgur.com/VfoTxmy.png)
+
 
 2. **Cloning repository**
 
@@ -126,7 +126,7 @@ Your GitHub fork now has the changes, but you want those changes to be merged in
 
 To make a pull request, go to your **forked repository** and you'll see **<branch-name> had recent pushes less than a minute ago** . Right next to it will be an option to **Compare & pull request**. Click on it, submit your pull request (also known as _PR_) explaining what you've done. Again, the PR title should be self-explanatory but concise. If you want to write details, you can add it in the description. If you're making some UI (User Interface) changes, please make sure to add a short screen recording. If that's not possible, at least add some screenshots.
 
-![how-to-create-pull-request](https://i.imgur.com/zYSuNY7.png)
+
 
 11. **Review stage**
 
