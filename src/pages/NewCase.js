@@ -1,6 +1,8 @@
 import React from 'react'
 import "../css/newcase.css"
 import bookmark from "../images/bookmark.svg"
+import Footer from "../components/Footer"
+import Tool from '../components/Tool'
 
 const NewCase = () => {
     return (
@@ -187,7 +189,8 @@ const NewCase = () => {
             </nav>
             )
             <div>NewCase</div>
-
+<Footer/>
+<Tool/>
         </>
     )
 }
