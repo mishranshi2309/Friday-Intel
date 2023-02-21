@@ -289,3 +289,11 @@ margin-top: 3rem;
    75% {transform: rotate(0.75turn)}
    100% {transform: rotate(1turn)}
   }
+
+
+
+.ForgotPassword{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+
+}

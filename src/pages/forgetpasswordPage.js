@@ -87,7 +87,7 @@ const ForgetPassword = () => {
                 </navbar>
 
                 <section className="form">
-                    <h3 className="Forgot Password">Welcome back</h3>
+                    <h3 className="ForgotPassword">Forgot Password</h3>
                     <h4 className="login-credentials-heading">
                         Please enter registered Email/Mobile number to receive a OTP
                     </h4>

@@ -4,12 +4,40 @@ import nightImage from "../images/night.png";
 import dayImage from "../images/day.png"
 import logo from "../images/logo.png";
 import user from "../images/user.png";
+import axios from 'axios';
 
 
 const Login = () => {
     const [mode, setMode] = useState(true);
+    const [email, setEmail]= useState("");
+    const [password, setPassword] = useState("");
 
-    function loggingIn(event) {
+    async function loggingIn(event) {
+        console.warn(email,password)
+
+
+        try {
+            const response = await axios.get("https://fridayintel.io/api-dev/login.php");
+            console.log(response);
+        }
+        catch (error) {
+            console.log(error);
+        }
+    
+
+
+        // let item  = {email, password};
+        // let result = await fetch("https://fridayintel.io/api-dev/cds.php?domain=a1.net&key=21ecb255008ef3cab5a06e4d98c8c4t2",{
+        //     mode: 'no-cors',    
+        // method: 'GET',
+        //     // headers:{
+        //     //     "Content-Type": "application/json",
+        //     //     "Accept": "application/json",
+        //     // },
+        //     // body: JSON.stringify(item)
+        // });   
+        // console.log(result, "result");
+        // result = await result.json();
         const arrowSvg = document.querySelector(".login-svg");
         arrowSvg?.classList.add("login-animation");
         const apiCall = new Promise((resolve, reject) => {
@@ -25,6 +53,7 @@ const Login = () => {
             checkMark.style.display = "revert";
         })
     }
+    
 
     function themeChange(event) {
         setMode(!mode);
@@ -49,7 +78,7 @@ const Login = () => {
 
         <div className="App">
             <main>
-                <navbar className="navbar">
+                <nav className="navbar">
                     <section className='logo'>
                         <img src={logo} alt="friday-intel logo " />
                     </section>
@@ -84,7 +113,7 @@ const Login = () => {
                             </label>
                         </div>
                     </section>
-                </navbar>
+                </nav>
 
                 <section className="form">
                     <h3 className="welcome-back">Welcome back</h3>
@@ -92,9 +121,9 @@ const Login = () => {
                         Please enter your login credentials.
                     </h4>
                     <p className="email-address">Email address</p>
-                    <input className="input input-1" placeholder="name@company.com" type="text" />
+                    <input className="input input-1" placeholder="name@company.com" type="text" onChange={(e)=>setEmail(e.target.value)} />
                     <p className="password">Password</p>
-                    <input className="input-2 input" placeholder="*********" type="text" />
+                    <input className="input-2 input" placeholder="*********" type="password" onChange={(e)=>setPassword(e.target.value)} />
                     <br></br> 
                     <span className='login-checkbox'>
                     
