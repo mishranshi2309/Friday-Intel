@@ -4,9 +4,12 @@ import nightImage from "../images/night.png";
 import dayImage from "../images/day.png"
 import logo from "../images/logo.png";
 import user from "../images/user.png";
+import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 
-
+function handleclick(){
+    Navigate("/caseBlog")
+}
 const Login = () => {
     const [mode, setMode] = useState(true);
     const [email, setEmail]= useState("");
@@ -74,6 +77,7 @@ const Login = () => {
 
         label.style.backgroundSize = "cover";
     }
+    
     return (
 
         <div className="App">
@@ -131,7 +135,7 @@ const Login = () => {
                     <span className="forgot-password">Forgot password</span>
                     </span>
 
-                    <button className="login-button" onClick={loggingIn}>
+                    <button className="login-button"  onclick = {handleclick} onClick={loggingIn}>
                         Login
                         <div className="login-svg">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
