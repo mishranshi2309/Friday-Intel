@@ -20,12 +20,25 @@ const Login = () => {
 
 
         try {
-            const response = await axios.get("https://fridayintel.io/api-dev/login.php");
+            const response = await axios.post("https://fridayintel.io/api-dev/login.php",{
+                'username': 'venom',
+                'password': 'venom1234'
+            });
+
             console.log(response);
         }
         catch (error) {
             console.log(error);
         }
+
+        // try {
+        //     const response = await axios.get("https://fridayintel.io/api-dev/terrorist.php?name=bhatkal");
+
+        //     console.log(response);
+        // }
+        // catch (error) {
+        //     console.log(error);
+        // }
     
 
 

@@ -1,21 +1,25 @@
 
 // import './App.css';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 // import Canvastools from './components/Canvastools';
 // import CaseBlog from './pages/CaseBlog';
 // import Home from './pages/Home'
 // import ForgetPassword from "./pages/forgetpasswordPage";
-// import NewCase from "./pages/NewCase";
+import NewCase from "./pages/NewCase";
 // import { Route, Routes, } from "react-router-dom";
 // import CaseBlog from "./pages/CaseBlog";
 // import Footer from './components/Footer';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 function App() {
   return (
-    <Login/>
+    // <Login/>
     // <Home/>
     // <CaseBlog />
     // <Canvastools />
-    // <NewCase />
+    <ProSidebarProvider>
+       <NewCase />
+    </ProSidebarProvider>
+   
     // <ForgetPassword/>
   );
 }

@@ -42,3 +42,6 @@
 .searchbar-logo {
     margin: 8px;
 }
+.container{
+    display: flex;
+}
